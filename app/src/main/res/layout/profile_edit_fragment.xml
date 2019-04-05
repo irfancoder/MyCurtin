@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_signupin"
+    android:clickable="true"
+    tools:ignore="MissingPrefix"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_clear_black_24dp"
+            android:layout_alignTop="@id/loginButton"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="72dp"
+        >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit profile."
+                android:textSize="36sp"
+                fontPath="font/AvenirHeavy.otf"
+                android:textColor="@color/colorBlack"
+
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did you hear about the claustraphobic astronaut? \nHe just needed a little space. Badum tss.."
+                android:textSize="16sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="24dp"
+                />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_picture_edit"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/default_profile_avatar"
+                app:civ_border_color="@color/colorBlack"
+                app:civ_border_width="1dp"
+                />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/name_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:elevation="4dp"
+                android:background="@drawable/edit_name_background"
+                app:hintAnimationEnabled="true">
+
+
+            >
+
+            <EditText
+                android:id="@+id/profile_name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:hint="Name"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:elevation="4dp"
+                android:background="@drawable/edit_name_background"
+
+                >
+
+                <EditText
+                    android:id="@+id/profile_email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/colorWhite"
+                    android:hint="Curtin email (verified)"
+                    android:enabled="false"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/reset_password"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:layout_margin="4dp"
+                android:drawableEnd="@drawable/ic_lock_black_24dp"
+                android:background="@drawable/edit_name_background"
+                android:gravity="start|center_vertical"
+                android:text="Reset password"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/submit_changes"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Save changes"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

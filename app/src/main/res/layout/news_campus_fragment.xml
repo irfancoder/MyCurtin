@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix"
+    >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Featured."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="36sp"
+                    android:padding="16dp"
+                    fontPath="font/AvenirHeavy.otf"
+
+                    />
+
+
+
+                <com.irfan.draft1.Utilities.CustomViewPager
+                        android:id="@+id/featured_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:focusableInTouchMode="true"
+
+                        />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    fontPath="font/AvenirHeavy.otf"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:padding="16dp"
+                    android:layout_marginTop="36dp"
+                    android:text="Everything else"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="36sp"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/news_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-7dp"
+        android:backgroundTint="@color/colorWhite"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:max="100"
+        android:visibility="gone" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+        android:tint="@color/colorAccent"
+        app:backgroundTint="@color/colorWhite"
+        app:layout_anchor="@id/refresh_news"
+        app:layout_anchorGravity="bottom|right|end"
+        android:id="@+id/scroll_up_fab"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

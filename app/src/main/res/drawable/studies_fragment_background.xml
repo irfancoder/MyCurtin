@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@color/colorPrimaryLight" android:endColor="@color/colorPrimary"
+                android:type="linear"
+                android:angle="180"
+                />
+        </shape>
+    </item>    <item>
+        <bitmap android:src="@drawable/curtin_background"
+            android:gravity="top" android:alpha="0.1"
+
+            />
+
+    </item>
+    <item
+        android:top="300dp"
+        android:bottom="-200dp"
+        android:left="-50dp"
+        android:right="-300dp">
+        <rotate
+            android:fromDegrees="-15"
+            android:pivotX="0%"
+            android:pivotY="100%">
+            <shape
+                android:shape="oval">
+                <solid
+                    android:color="?android:colorBackground"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

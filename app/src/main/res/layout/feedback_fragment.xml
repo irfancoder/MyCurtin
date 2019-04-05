@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    tools:ignore="MissingPrefix"
+    android:focusable="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_dummy"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorWhite"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/review_back"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:padding="16dp"
+                android:src="@drawable/ic_clear_black_24dp"
+                app:layout_scrollFlags="scroll|enterAlways"
+
+                />
+
+            <ImageView
+                android:id="@+id/review_help"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_help_outline_black_24dp"
+                app:layout_scrollFlags="scroll|enterAlways" />
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar_dummy"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <TextView
+            android:id="@+id/review_header"
+            fontPath="fonts/OrkneyBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="16dp"
+            android:text="How was the tracking feature?"
+            android:textColor="@color/colorBlack"
+            android:textSize="34sp"
+
+            />
+
+
+
+
+        <TextView
+            android:id="@+id/review_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:background="@color/colorWhite"
+            android:textSize="16sp"
+            android:hint="Date:"
+            android:maxLines="1"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            fontPath="fonts/Poppins-SemiBold.ttf"
+            />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:id="@+id/review_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="start"
+            android:hint="Tell us what you like or don't like when using the live tracking feature. Suggestions are always welcome too"
+            android:inputType="textCapSentences|textMultiLine"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp" />
+
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/submit_review"
+        fontPath="fonts/OrkneyMedium.otf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/submit_review_button"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Submit"
+        android:layout_gravity="bottom"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="invisible"
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="@color/colorWhite"
+        android:indeterminateTint="@color/colorAccent"
+        android:layout_marginBottom="-7dp"
+        />
+</android.support.design.widget.CoordinatorLayout>

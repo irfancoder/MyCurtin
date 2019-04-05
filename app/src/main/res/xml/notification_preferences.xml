@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Gello"
+    >
+    <PreferenceCategory android:title="General">
+
+        <SwitchPreference android:title="Receive all notifications"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Clubs"
+        >
+        <CheckBoxPreference
+            android:title="Founders Club"
+            android:width="@dimen/activity_horizontal_margin"
+            android:height="@dimen/activity_horizontal_margin"
+            />
+        <CheckBoxPreference
+            android:title="IEEE"
+            android:width="@dimen/activity_horizontal_margin"
+            android:height="@dimen/activity_horizontal_margin"
+            />
+        <CheckBoxPreference
+            android:title="IEM"
+            android:width="@dimen/activity_horizontal_margin"
+            android:height="@dimen/activity_horizontal_margin"
+            />
+        <CheckBoxPreference
+            android:title="MechE"
+            android:width="@dimen/activity_horizontal_margin"
+            android:height="@dimen/activity_horizontal_margin"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>

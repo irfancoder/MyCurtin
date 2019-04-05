@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/busAlarm"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/slide_bus_alarm"
+            android:layout_alignParentEnd="true"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="24dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/colorBlack"
+            android:text="Hey, your bus is here. \nCatch it!"
+            />
+        <SeekBar
+            android:id="@+id/stopAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:progress="10"
+            android:layout_marginStart="24dp"
+
+            android:max="100"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/busAlarm"
+
+
+            android:thumb="@drawable/slide_initial_alarm" />
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

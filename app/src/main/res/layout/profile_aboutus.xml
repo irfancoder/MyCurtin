@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/mycurtinlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            android:src="@drawable/mycurtinlogo"
+
+            />
+
+        <TextView
+            android:id="@+id/about_us_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/about_us"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Developed and designed by MyCurtin team \nLogo designed by Sia Ren Bin\nIn collaboration with \nCurtin University Malaysia Student Council" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+<!--<TextView-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:gravity="center"-->
+<!--android:text="Follow Sprouty for more awesome projects!"-->
+<!--android:textColor="@color/colorAccent" />-->
+
+
+    <!--/>--><!--<LinearLayout--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:orientation="horizontal"--><!--android:weightSum="3"--><!--android:layout_gravity="center"--><!--&gt;-->
+
+
+    <!--<ImageView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:src="@drawable/facebook"--><!--android:padding="16dp"--><!--android:layout_weight="1"--><!--android:id="@+id/facebook"--><!--/>-->
+
+
+    <!--<ImageView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:src="@drawable/instagram"--><!--android:layout_weight="1"--><!--android:padding="16dp"-->
+
+    <!--android:id="@+id/instagram"--><!--/>-->
+
+    <!--<ImageView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:src="@drawable/twitter"--><!--android:padding="16dp"-->
+
+    <!--android:layout_weight="1"--><!--android:id="@+id/twitter"--><!--/>-->
+
+
+    <!--</LinearLayout>-->
+

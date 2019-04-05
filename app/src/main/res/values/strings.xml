@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">MyCurtin</string>
+    <string name="tab_1">Events</string>
+    <string name="tab_2">Shuttle Bus</string>
+    <string name="tab_3">Studies</string>
+    <string name="tab_4">Inbox</string>
+    <string name="tab_5">Profile</string>
+
+    <string-array name="bus_stops">
+        <item>Campus</item>
+        <!--<item>Villa</item>-->
+        <!--<item>Nam Leong</item>-->
+        <!--<item>Perkasa</item>-->
+        <!--<item>Water I</item>-->
+        <!--<item>Water II</item>-->
+        <!--<item>Miri City Malls</item>-->
+        <!--<item>New World Mart</item>-->
+    </string-array>
+
+
+    <string-array name="select_day">
+        <item>weekday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string name="newsfeed_tab_1">CAMPUS</string>
+    <string name="newsfeed_tab_2">COMMUNITY</string>
+    <string name="newsfeed_tab_3">SAVED</string>
+
+    <string name="schedule_tab_1">SCHEDULE</string>
+    <string name="schedule_tab_2">ALARMS</string>
+    <string name="schedule_tab_3">MAP</string>
+
+
+    <string name="notifcation_default">Receive a notification on time</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string name="forgot_password_success">Awesome! We\'ve sent you an email! \nPlease click on the link attached in the email to reset your password</string>
+
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="invalid_login_message">You have entered an invalid username or password</string>
+    <string name="invalid_signup_message">The email address you entered is already registered</string>
+    <string name="pickup_times">Here are the pickup times!</string>
+    <string name="about_us">Version B1.1</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="IS_USER_FIRST_TIME">isUserFirstTime</string>
+    <string name="inbox_tab_1">CHATS</string>
+    <string name="inbox_tab_2">CONTACTS</string>
+    <string name="requestIDToken">AIzaSyBWf1s_yeALHFgR5PDfArF-5y-k3aCmcGA</string>
+    <string name="onboarding_reminder">Please note you need to be a member of Curtin Malaysia to use the MyCurtin app</string>
+    <string name="signup_copy">Please fill in below, we\'d like to know you more.</string>
+    <string name="signin_copy">Hey, we met before. Welcome back!</string>
+    <string name="forgotpass_copy">Don\'t worry, we didn\'t forget about you.</string>
+    <string name="terms_policy">By signing up, you agree to MyCurtin\'s \n <a href="https://forum.lowyat.net/Kopitiam">Terms of Service and Privacy Policy</a> </string>
+
+    <string-array name="onboarding_messages">
+        <item>A new year,\na new beginning.</item>
+        <item>Find out events \nthat matter to you.</item>
+        <item>Track the buses \nanywhere, anytime.</item>
+        <item>Studies? \nWe got you covered.</item>
+    </string-array>
+
+
+</resources>

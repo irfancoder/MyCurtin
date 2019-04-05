@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.irfan.draft1">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
+    <permission
+        android:name="com.irfan.draft1.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.irfan.draft1.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permissions.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MainClass.MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/mycurtinlogo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        >
+        <uses-library android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <activity android:name=".MainClass.MainActivity"/>
+
+        <activity
+            android:name=".Notification.AlarmReceiver"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:parentActivityName=".MainClass.MainActivity"
+
+            />
+
+        <activity android:name=".Studies.StudiesDetailActivity"
+            android:parentActivityName=".MainClass.MainActivity"
+
+            />
+        <activity
+            android:name=".MainClass.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:noHistory="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".QRCodeReader.QRCodeReaderActivity"
+            android:parentActivityName=".MainClass.MainActivity"
+
+            />
+        <activity
+            android:name=".Maps.MapFullscreen"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreenTheme"
+            android:parentActivityName=".MainClass.MainActivity"
+
+            />
+        <activity android:name=".News.NewsLearnMore"
+            android:parentActivityName=".MainClass.MainActivity"
+            >
+            <intent-filter>
+                <action android:name="INCOMINGNEWS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+
+        <receiver android:name=".Notification.AlarmNotification_onTime" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCvzNjnwF9Jx5etKsJlc5saRTi2nw0ncS4" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode"/>
+
+
+        <activity
+            android:name=".MainClass.OnboardingActivity"
+            android:label="@string/title_activity_onboarding"
+            android:theme="@style/AppTheme"
+            android:noHistory="true"
+            android:parentActivityName=".MainClass.MainActivity"
+
+            >
+
+        </activity>
+        <service
+            android:name=".Notification.EventsNotification">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/mycurtinlogo" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <service
+            android:exported="false"
+            android:name=".Notification.EventJobService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+
+        <!--<service-->
+            <!--android:name=".Notification.EventNotificationID">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+    </application>
+
+</manifest>

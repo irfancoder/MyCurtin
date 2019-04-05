@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="20">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/fullscreenMapID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transitionName="fullscreenMap"
+
+            />
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fab_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            app:fabSize="mini"
+
+            app:menu_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorAccent"
+            app:menu_fab_size="mini"
+            app:menu_icon="@drawable/ic_add_white_24dp"
+            app:menu_labels_colorNormal="#333"
+            app:menu_openDirection="up"
+            app:menu_showShadow="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/post_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_insert_comment_black_24dp"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/colorAccent"
+                app:fab_label="Feedback"
+                app:fab_size="mini" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/post_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_help_outline_black_24dp"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/colorAccent"
+                app:fab_label="Notice"
+                app:fab_size="mini" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@color/colorWhite">
+
+        <include
+            android:id="@+id/bus_container"
+            layout="@layout/bus_selection_map" />
+    </RelativeLayout>
+
+    <!--<com.github.clans.fab.FloatingActionMenu-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="16dp"-->
+    <!--app:layout_anchor="@id/fullscreenMapID"-->
+    <!--app:layout_anchorGravity="bottom|end"-->
+
+    <!--android:foreground="?android:attr/selectableItemBackground"-->
+    <!--android:stateListAnimator="@animator/elevate_fab"-->
+    <!--android:id="@+id/floatingActionMenu"-->
+    <!--android:transitionName="floatingActionMenu"-->
+    <!--app:menu_colorNormal="@color/colorAccent"-->
+    <!--app:menu_colorPressed="@color/colorAccent"-->
+    <!--app:menu_fab_size="normal"-->
+    <!--app:menu_icon="@drawable/ic_gps_fab"-->
+    <!--app:menu_labels_colorNormal="#333"-->
+    <!--app:menu_openDirection="up"-->
+    <!--app:menu_showShadow="true">-->
+
+
+    <!--<com.github.clans.fab.FloatingActionButton-->
+    <!--android:id="@+id/busA"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_margin="16dp"-->
+    <!--android:foreground="?android:attr/selectableItemBackground"-->
+    <!--android:src="@drawable/ic_bus_fab"-->
+    <!--app:fab_colorNormal="@color/colorAccent"-->
+    <!--app:fab_colorPressed="@color/colorAccent"-->
+    <!--app:fab_colorRipple="@color/colorAccent"-->
+    <!--app:fab_label="Bus A"-->
+    <!--app:fab_size="mini" />-->
+
+    <!--<com.github.clans.fab.FloatingActionButton-->
+    <!--android:id="@+id/busB"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_margin="16dp"-->
+    <!--android:foreground="?android:attr/selectableItemBackground"-->
+    <!--android:src="@drawable/ic_bus_fab"-->
+    <!--app:fab_colorNormal="@color/colorAccent"-->
+    <!--app:fab_colorPressed="@color/colorAccent"-->
+    <!--app:fab_colorRipple="@color/colorAccent"-->
+    <!--app:fab_label="Bus B"-->
+    <!--app:fab_size="mini"-->
+
+    <!--/>-->
+    <!--&lt;!&ndash;<com.github.clans.fab.FloatingActionButton&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/busC"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="bottom|end"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_margin="16dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:foreground="?android:attr/selectableItemBackground"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/ic_bus_fab"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorNormal="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorPressed="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorRipple="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_label="Bus C"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_size="mini"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<com.github.clans.fab.FloatingActionButton&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/busD"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="bottom|end"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_margin="16dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:foreground="?android:attr/selectableItemBackground"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/ic_bus_fab"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorNormal="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorPressed="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorRipple="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_label="Bus D"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_size="mini"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<com.github.clans.fab.FloatingActionButton&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/busE"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="bottom|end"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_margin="16dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:foreground="?android:attr/selectableItemBackground"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/ic_bus_fab"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorNormal="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorPressed="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_colorRipple="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_label="Bus E"&ndash;&gt;-->
+    <!--&lt;!&ndash;fab:fab_size="mini"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+
+    <!--</com.github.clans.fab.FloatingActionMenu>-->
+</LinearLayout>
